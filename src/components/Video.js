@@ -6,6 +6,7 @@ import ContentAdd from 'material-ui/svg-icons/content/add';
 import Sidebar from './sidebar';
 import AppBar from 'material-ui/AppBar';
 import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
 
 const style = {
     marginRight: 10,
@@ -23,6 +24,8 @@ const Video = () => (
             <Card>
 
                 <div className="button_wrapper">
+                <RaisedButton label="End Call" secondary={true} style={style} />
+            <RaisedButton label="Next Call" primary={true} style={style} />
                 </div>
                 <div className="webcam">
                     <CardText>
