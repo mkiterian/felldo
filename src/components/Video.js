@@ -5,6 +5,7 @@ import FloatingActionButton from 'material-ui/FloatingActionButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import Sidebar from './sidebar';
 import AppBar from 'material-ui/AppBar';
+import FlatButton from 'material-ui/FlatButton';
 
 const style = {
     marginRight: 10,
@@ -15,7 +16,7 @@ const Video = () => (
     <div>
     <AppBar
             title="Felladoor"
-            iconClassNameRight="muidocs-icon-navigation-expand-more"
+            iconElementRight={<FlatButton label={window.sessionStorage.user} />}
           />
         <div className="video-wrapper">
             <Sidebar />

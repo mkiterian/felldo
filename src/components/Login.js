@@ -14,17 +14,11 @@ const style = {
 };
 
 const responseGoogle = (response) => {
-    console.log(response);
+    window.sessionStorage.user = response.w3.ig;
     window.location.replace('/feed');
 }
 
-//   function onSignIn(){
-//     window.location.replace('/feed');
-//   }
-
 class Login extends Component {
-
-
     render() {
         return (
             <div>
