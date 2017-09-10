@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import AppBar from 'material-ui/AppBar';
 import { Card, CardTitle } from 'material-ui/Card';
-import {cyan500} from 'material-ui/styles/colors';
+import { cyan500 } from 'material-ui/styles/colors';
+import GoogleLogin from 'react-google-login';
+
 const style = {
     marginLeft: 30 + '%',
     marginTop: 10 + '%',
@@ -9,14 +11,19 @@ const style = {
     height: 200,
     color: 'white',
     backgroundColor: cyan500
-  };
+};
+
+const responseGoogle = (response) => {
+    console.log(response);
+    window.location.replace('/feed');
+}
 
 //   function onSignIn(){
 //     window.location.replace('/feed');
 //   }
 
 class Login extends Component {
-  
+
 
     render() {
         return (
@@ -28,7 +35,13 @@ class Login extends Component {
                 />
                 <Card style={style}>
                     <h3 className="sign-in">Sign In To Get Started</h3>
-                    <div className="g-signin2" data-onsuccess="onSignIn"></div>
+                    <GoogleLogin
+                        className="g-signin2"
+                        clientId="1057566456731-5e3chaqsc7gqtce52c2h184dbjg2kj2f.apps.googleusercontent.com"
+                        buttonText="Login"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                    />
                 </Card>
 
             </div>);
