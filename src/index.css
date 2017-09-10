@@ -42,7 +42,8 @@ body {
 .g-signin2 {
   margin-left: 36%;
   margin-top: 20;
-  padding-top: 6%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .sign-in {
