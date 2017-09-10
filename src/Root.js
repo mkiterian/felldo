@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import App from './App';
-import Video from './Video';
-import Login from './Login';
+import App from './components/App';
+import Video from './components/Video';
+import Login from './components/Login';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
